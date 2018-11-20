@@ -1,0 +1,440 @@
+
+/* ############################## 格式化 web H5 基础样式：（微信小程序请删掉该模块） ############################## */
+html {
+  -ms-touch-action: none;
+}
+body {
+  font-family: Heiti, Heiti SC, DroidSans, DroidSansFallback, Arial, "Microsoft YaHei";
+  background-color: #fff;
+  font-size: 24px
+}
+html,body{
+  height: 100%;
+}
+.ellipse {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+input {
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+}
+a {
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  color: #999999;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, span, a, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: PingFang-SC-Regular !important;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+fieldset, img, iframe {
+  border: 0
+}
+:focus {
+  outline: 0
+}
+i, address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal
+}
+ol, ul {
+  list-style: none
+}
+li {
+  list-style: none
+}
+caption, th {
+  text-align: left
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: ''
+}
+abbr, acronym {
+  border: 0;
+  font-variant: normal
+}
+img {
+  vertical-align: top;
+  border: none;
+}
+input, textarea {
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  -webkit-appearance: none;
+}
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: none;
+}
+input[type="text"], input[type="password"], input[type="search"], input[type="tel"], input[type="number"], input[type="email"], input[type="url"], textarea {
+  -webkit-appearance: none;
+  border: 1px solid;
+  border-radius: 0;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+em, i {
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+input[type="checkbox"] {
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #F5F5F5;
+  border: 0.05rem solid #CCC;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+/* ############################## 格式化 web H5 基础样式 结束； 格式化微信基础样式   ############################## */
+
+/*view{
+  box-sizing: border-box;
+}*/
+
+
+/* ############################## 格式化微信基础样式 结束； 颜色模块 ： ############################## */
+/* 强调色--字体颜色 */
+.ak-stress-color{
+	color: #ff495e !important;
+}
+/* 强调色--背景颜色 */
+.ak-stress-BG{
+	background-color: #ff495e !important;
+}
+
+/* 主题色--字体颜色 */
+.ak-theme-color{
+	color: #666 !important;
+}
+/* 主题色--背景颜色 */
+.ak-theme-BG{
+	background-color: #fdfdfd !important;
+}
+
+/* 次要色--字体颜色 */
+.ak-lesser-color{
+	color: #bbb !important;
+}
+/* 次要色--背景颜色 */
+.ak-lesser-BG{
+	background-color: #ccc !important;
+}
+
+
+	/* ############################## 颜色模块 结束； 小功能样式 模块： ############################## */
+
+/* 背景图居中（使用的时候设置background-image: url(...)就可以啦~ ） */
+.ak-BG-C{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #fefefe;
+}
+
+/*清除浮动;*/
+.ak-clear {
+    zoom: 1
+}
+.ak-clear:after {
+    display: block;
+    clear: both;
+    content: '\20'
+}
+/*左右padding距离*/
+
+.ak-pLR {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+/* 左右浮动 */
+.ak-fl{
+  float: left;
+}
+.ak-fr{
+  float: right;
+}
+
+/* 宽度100% */
+.ak-w100{
+    width:100%;
+}
+/* border: */
+.ak-border{
+    border: 1px solid #F3F3F3;
+}
+.ak-border-B{
+    border-bottom: 1px solid #F3F3F3;
+}
+.ak-border-T{
+    border-top: 1px solid #F3F3F3;
+}
+
+/* 超出部分隐藏 */
+.ak-overflow{
+    overflow: hidden;
+}
+
+/* 超出一行省略 */
+.ak-ellipsis-1{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+/* 超出两行省略 */
+.ak-ellipsis-2{
+	display: -webkit-box;
+	display: box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	word-break: break-all;
+	white-space: normal !important;
+	-webkit-line-clamp: 2; /* 这里控制超出几行省略 */
+	-webkit-box-orient: vertical;
+}
+
+/*      站位空DIV           */
+.ak-nullDiv {
+    width: 100%;
+    height: 2.25rem !important;
+    opacity: 0;
+    margin-top: 0.5rem;
+}
+/*     实体的阴影          */
+.ak-boxSad {
+    box-shadow: 1px 1px 4px #888;
+}
+
+/*      input的内向阴影      */
+.ak-IptSad {
+    border-radius: 0.16rem;
+    -webkit-box-shadow: 0 5px 5px -4px #d6d6d6 inset;
+    -moz-box-shadow: 0 5px 5px -4px #d6d6d6 inset;
+    -o-box-shadow: 0 5px 5px -4px #d6d6d6 inset;
+    -ms-box-shadow: 0 5px 5px -4px #d6d6d6 inset;
+    box-shadow: 0 5px 5px -4px #d6d6d6 inset;
+    background-color: rgba(238, 238, 238, 0.9);
+}
+
+	/* ############################## 小功能模块 结束；弹性盒模块： ############################## */
+
+/*      弹性盒居中            */
+.ak-flexC {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -moz-box-pack: space-around;
+    -webkit--moz-box-pack: space-around;
+    box-pack: space-around;
+    align-items: center;
+    -webkit-align-items: center;
+    box-align: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+}
+
+/*      弹性盒居首位           */
+.ak-flexS {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -moz-box-pack: flex-start;
+    -webkit--moz-box-pack: flex-start;
+    box-pack: flex-start;
+    align-items: center;
+    -webkit-align-items: center;
+    box-align: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+}
+
+/*      弹性盒居末位           */
+.ak-flexE {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    -moz-box-pack: flex-end;
+    -webkit--moz-box-pack: flex-end;
+    box-pack: flex-end;
+    align-items: center;
+    -webkit-align-items: center;
+    box-align: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+}
+
+/*      弹性盒居两边            */
+.ak-flexB {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -moz-box-pack: space-between;
+    -webkit--moz-box-pack: space-between;
+    box-pack: space-between;
+    align-items: center;
+    -webkit-align-items: center;
+    box-align: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+}
+
+/*      元素变成弹性盒            */
+.ak-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* 				弹性盒纵向排列(居中) 			 */
+.ak-flex-columnC {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -moz-box-pack: space-around;
+    -webkit--moz-box-pack: space-around;
+    box-pack: space-around;
+    align-items: center;
+    -webkit-align-items: center;
+    box-align: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+/* 				弹性盒纵向排列(居左) 			 */
+.ak-flex-columnS {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -moz-box-pack: space-around;
+    -webkit--moz-box-pack: space-around;
+    box-pack: space-around;
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+    box-align: flex-start;
+    -moz-box-align: flex-start;
+    -webkit-box-align: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+	/* ############################## 弹性盒模块 结束； 渐变的边框模块 ： ############################## */
+/*渐变的边框（黑色；横向）：*/
+.ak-black-bottomBorder {
+    width: 100%;
+    height: 1px;
+    background-image: -webkit-gradient( linear, 0 100%, 100% 0, color-stop(0, transparent), color-stop(.5, rgba(0, 0, 0, .5)), color-stop(.5, rgba(0, 0, 0, .5)), color-stop(1, transparent), to(transparent));
+}
+/*渐变的边框（橘黄色；纵向）：   		（需要自己设高）！！！*/
+.ak-orange-leftBorder {
+    width: 1px;
+    background-image: -webkit-gradient( linear, 0 100%, 100% 0, color-stop(0, transparent), color-stop(.5, rgba(255, 119, 0, .5)), color-stop(.5, rgba(255, 119, 0, .5)), color-stop(1, transparent), to(transparent));
+}
+/*渐变的边框（橘黄色；横向）：*/
+.ak-orange-bottomBorder {
+    width: 100%;
+    height: 0.05rem;
+    background-image: -webkit-gradient( linear, 0 100%, 100% 0, color-stop(0, transparent), color-stop(.5, rgba(255, 119, 0, .5)), color-stop(.5, rgba(255, 119, 0, .5)), color-stop(1, transparent), to(transparent));
+}
+/*渐变的边框（白色；纵向）：   		（需要自己设高）！！！*/
+.ak-white-leftBorder {
+    width: 0.1rem;
+    background-image: -webkit-gradient( linear, 0 100%, 100% 0, color-stop(0, transparent), color-stop(.5, rgba(255, 255, 255, .5)), color-stop(.5, rgba(255, 255, 255, .5)), color-stop(1, transparent), to(transparent));
+}
+/*渐变的边框（黑色；纵向）：   		（需要自己设高）！！！*/
+.ak-black-leftBorder {
+    width:  1px;
+    background-image: -webkit-gradient( linear, 0 100%, 100% 0, color-stop(0, transparent), color-stop(.5, rgba(0, 0, 0, .5)), color-stop(.5, rgba(0, 0, 0, .5)), color-stop(1, transparent), to(transparent));
+}
+/*渐变的边框（灰白色；横向）：*/
+.ak-smoke-bottomBorder {
+    width: 100%;
+    height: 0.05rem;
+    background-image: -webkit-gradient( linear, 0 100%, 100% 0, color-stop(0, transparent), color-stop(.5, rgba(222, 222, 222, .5)), color-stop(.5, rgba(222, 222, 222, .5)), color-stop(1, transparent), to(transparent));
+}
+
+
+/* 隐藏模块 */
+.ak-hide{
+  display: none;
+}
+/* 遮罩层 */
+.ak-mask{
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
